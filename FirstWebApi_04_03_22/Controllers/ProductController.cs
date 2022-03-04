@@ -13,7 +13,7 @@ namespace FirstWebApi_04_03_22.Controllers
         public List<ProductDto> LoadProductList()
         {
             List<ProductDto> resultlist = new List<ProductDto>();
-        for(int i=0;i<100;i++)
+        for(int i=1;i<=100;i++)
             {
                 ProductDto product = new ProductDto()
                 {

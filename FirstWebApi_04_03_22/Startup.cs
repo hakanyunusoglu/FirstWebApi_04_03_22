@@ -34,7 +34,7 @@ namespace FirstWebApi_04_03_22
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FirstWebApi_04_03_22", Version = "v1" });
             });
             services.AddCors();
-            services.AddMvc(options => options.EnableEndpointRouting = false);
+            //services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,12 +53,12 @@ namespace FirstWebApi_04_03_22
             app.UseRouting();
 
             app.UseAuthorization();
-            app.UseMvc();
+            //app.UseMvc();
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllers();
-            //});
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
